@@ -1,0 +1,87 @@
+* {
+    font-family: "JetBrainsMono Nerd Font", sans-serif;
+    font-size: 13px;
+}
+
+window#waybar {
+    background-color: rgba(40, 40, 40, 0.9);
+    color: #ebdbb2;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    color: #ebdbb2;
+}
+
+#workspaces button.active {
+    color: #fb4934;
+}
+
+#window {
+    padding: 0 10px;
+}
+
+#battery {
+    padding: 0 10px;
+    color: #ebdbb2;
+    font-size: 14px;
+}
+
+#battery.charging {
+    color: #b8bb26;
+}
+
+#battery.warning:not(.charging) {
+    color: #fabd2f;
+}
+
+#battery.critical:not(.charging) {
+    color: #fb4934;
+    animation: blink 0.5s linear infinite alternate;
+}
+
+@keyframes blink {
+    to {
+        background-color: #fb4934;
+        color: #282828;
+    }
+}
+
+#pulseaudio {
+    padding: 0 10px;
+    color: #ebdbb2; /* Gruvbox foreground */
+}
+
+#pulseaudio.muted {
+    color: #928374; /* Gruvbox gray */
+}
+
+#clock {
+    padding: 0 10px;
+    margin-right: 4px;
+    color: #d4be98; /* Gruvbox Material foreground */
+}
+
+#backlight {
+    padding: 0 10px;
+    margin-right: 4px;
+    color: #d4be98; /* Gruvbox Material foreground */
+}
+
+#network {
+    padding: 0 10px;
+    margin-right: 4px;
+    color: #d4be98; /* Gruvbox Material foreground */
+}
+
+#network.disconnected {
+    color: #928374; /* Gruvbox Material gray */
+}
+
+#network.linked {
+    color: #7daea3; /* Gruvbox Material blue */
+}
+
+#network.wifi {
+    color: #a9b665; /* Gruvbox Material green */
+}
